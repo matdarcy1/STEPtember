@@ -1,0 +1,56 @@
+{
+    "avatarUrl": "",
+    "fundsRaised": 0,
+    "stepCount": 26288,
+    "personalTarget": 1000,
+    "bigUps": 0,
+    "team": {
+        "teamTarget": 1200,
+        "teamName": "Range & Steps",
+        "teamId": "34436",
+        "teamStepCount": 100281,
+        "teamPercentageComplete": 34,
+        "teamFundsRaised": 414.28,
+        "teamMembers": [{
+            "historyId": "AU-150281",
+            "stepsCount": 26288,
+            "firstName": "Anthony",
+            "lastName": "Vallone"
+        }, {
+            "historyId": "AU-150349",
+            "stepsCount": 25378,
+            "firstName": "Pascale",
+            "lastName": "Al-Khoury"
+        }, {
+            "historyId": "AU-150350",
+            "stepsCount": 22730,
+            "firstName": "Adam",
+            "lastName": "Borg"
+        }, {
+            "historyId": "AU-150351",
+            "stepsCount": 25885,
+            "firstName": "Sarra",
+            "lastName": "Sievin"
+        }]
+    },
+    "leaderBoard": {
+        "teamFundsRankingInOrg": 16,
+        "teamFundsRankingInCountry": -1
+    },
+    "stepGraphData": {
+        "teamBreakDownGraphData": [
+                ["Date", "Anthony", "Pascale", "Adam", "Sarra"],
+                ["01 Sep", 12704, 12366, 22730, 12362],
+                ["02
+                    Sep ",13584,13012,0,13523]],"
+                    personalGraphData ": [["
+                    Date ","
+                    Anthony "],["
+                    01 Sep ",12704],["
+                    02 Sep ",13584]]},"
+                    sources ": [{}, {
+                        "date": "02 Sep",
+                        "steps": 13584,
+                        "source": "mobile_app_tracker"
+                    }]
+                }
