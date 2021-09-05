@@ -9,7 +9,7 @@ $( document ).ready(function() {
 
     var teamData = [];
     
-    teams.forEach(function(teamHash) {
+    $.each(teams, function(index, teamHash) {
 
         var remote = $.ajax({
             data:{
@@ -28,11 +28,63 @@ $( document ).ready(function() {
 
     console.log(teamData);
 
-    teamData.forEach(function(team) {
+    $.each(teamData, function(index, team) {
+
+        var logsMissing = 0;
+
+        team.graphdata.forEach(function(data, index) {
+            if(data[0] == 0) { logsMissing++ }
+            if(data[1] == 0) { logsMissing++ }
+            if(data[2] == 0) { logsMissing++ }
+            if(data[3] == 0) { logsMissing++ }
+            if(data[4] == 0) { logsMissing++ }
+        });
+
+
         $( "#teamrows" ).append("<tr>\
                                     <td>" + team.team + "</td>\
                                     <td>" + team.steps + "</td>\
+                                    <td>" + logsMissing + "</td>\
                                 </tr>");
+
+
+        var detailsHtml = "  <div class='card mb-5 text-center'>"
+                                        + team.team + 
+                                        "<div class='card-body'>\
+                                            <table class='table table-striped table-bordered text-center '>";
+
+
+                                                team.graphdata.forEach(function(data, index) {
+                                                    if(index == 0) {
+                                                        detailsHtml += "<thead class='thead-dark'>\
+                                                                            <tr>\
+                                                                                <th scope='col'>" + data[0] + "</th>\
+                                                                                <th scope='col'>" + data[1] + "</th>\
+                                                                                <th scope='col'>" + data[2] + "</th>\
+                                                                                <th scope='col'>" + data[3] + "</th>\
+                                                                                <th scope='col'>" + data[4] + "</th>\
+                                                                            </tr>\
+                                                                        </thead>\
+                                                                        <tbody>";
+                                                    } else {
+                                                        detailsHtml += "<tr>\
+                                                                            <td>" + data[0] + "</th>\
+                                                                            <td>" + data[1] + "</td>\
+                                                                            <td>" + data[2] + "</td>\
+                                                                            <td>" + data[3] + "</td>\
+                                                                            <td>" + data[4] + "</td>\
+                                                                        </tr>";
+                                                    }
+                                                });
+                                                
+
+
+                detailsHtml += "              </tbody>\
+                                            </table>\
+                                        </div>\
+                                    </div>";
+
+            $("#teamdetails").append(detailsHtml);    
 /*
         $("#teamdetail").append("<table class='table table-striped table-bordered'>\
                                     <thead class='thead-dark'>\
