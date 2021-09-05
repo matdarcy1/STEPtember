@@ -46,7 +46,8 @@ $( document ).ready(function() {
                                 </tr>");
 
 
-        var detailsHtml = "  <div class='card mb-5 text-center'>"
+        var detailsHtml = "  <div class='col-lg-4 col-sm-12'>\
+                                <div class='card mb-5 text-center'>"
                                         + "<h3>" + team.team + "</h3>" +
                                         "<div class='card-body'>\
                                             <table class='table table-striped table-bordered text-center '>";
@@ -80,7 +81,8 @@ $( document ).ready(function() {
                 detailsHtml += "              </tbody>\
                                             </table>\
                                         </div>\
-                                    </div>";
+                                    </div>\
+                                </div>";
 
             $("#teamdetails").append(detailsHtml);    
     });
