@@ -26,8 +26,6 @@ $( document ).ready(function() {
 
     teamData.sort((a,b) => (a.steps < b.steps) ? 1 : ((b.steps < a.steps) ? -1 : 0));
 
-    console.log(teamData);
-
     $.each(teamData, function(index, team) {
 
         var logsMissing = 0;
@@ -49,7 +47,7 @@ $( document ).ready(function() {
 
 
         var detailsHtml = "  <div class='card mb-5 text-center'>"
-                                        + team.team + 
+                                        + "<h3>" + team.team + "</h3>" +
                                         "<div class='card-body'>\
                                             <table class='table table-striped table-bordered text-center '>";
 
@@ -85,44 +83,5 @@ $( document ).ready(function() {
                                     </div>";
 
             $("#teamdetails").append(detailsHtml);    
-/*
-        $("#teamdetail").append("<table class='table table-striped table-bordered'>\
-                                    <thead class='thead-dark'>\
-                                        <tr>\
-                                            <th scope='col'>Team Member</th>\
-                                            <th scope='col'>Date</th>\
-                                            <th scope='col'>Steps</th>\
-                                        </tr>\
-                                    </thead>\
-                                    <tbody id='teamrows'>");
-        
-                 
-        team.graphdata.forEach(function(data, index) {
-            console.log(index);
-            $("#teamdetail" ).append("<tr>\
-                                        <th scope='row'>" + data[0] + "</th>\
-                                        <td>" + data[1] + "</td>\
-                                    </tr>");
-        });
-
-
-         $("#teamdetail").append("</tbody>\
-                                </table>");
-                                */
     });
-
-    /*
-        $.post( "https://app.steptember.org.au/Mobileapp/getDashboard", { member_hash: teamHash })
-        .done(function( data ) {
-            const obj = JSON.parse(data);
-            $( "#teamrows" ).append( " <tr>\
-                                            <th scope='row'>" + obj.team.teamName + "</th>\
-                                            <td>" + obj.team.teamStepCount+ "</td>\
-                                        </tr>");
-
-
-        });
-        */
-
-    
 });
