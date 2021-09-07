@@ -29,7 +29,7 @@ $( document ).ready(function() {
     $.each(teamData, function(index, team) {
 
         var logsMissing = 0;
-		var total = [];
+	var total = [];
 
         team.graphdata.forEach(function(data, index) {
             if(data[0] == 0) { logsMissing++ }
@@ -56,10 +56,10 @@ $( document ).ready(function() {
 
                                                 team.graphdata.forEach(function(data, index) {
                                                     if(index == 0) {
-														total[0] = 0;
-														total[1] = 0;
-														total[2] = 0;
-														total[3] = 0;
+							total[0] = 0;
+							total[1] = 0;
+							total[2] = 0;
+							total[3] = 0;
                                                         detailsHtml += "<thead class='thead-dark'>\
                                                                             <tr>\
                                                                                 <th scope='col'>" + data[0] + "</th>\
@@ -71,10 +71,10 @@ $( document ).ready(function() {
                                                                         </thead>\
                                                                         <tbody>";
                                                     } else {
-														total[0] += data[1];
-														total[1] += data[2];
-														total[2] += data[3];
-														total[3] += data[4];
+							total[0] += data[1];
+							total[1] += data[2];
+							total[2] += data[3];
+							total[3] += data[4];
 														
                                                         detailsHtml += "<tr>\
                                                                             <td>" + data[0] + "</th>\
@@ -86,11 +86,11 @@ $( document ).ready(function() {
                                                     }
                                                 });
                                                 detailsHtml += "<tr><td>Total</td>\
-																<td>" + total[0] + "</td>\
-																<td>" + total[1] + "</td>\
-																<td>" + total[2] + "</td>\
-																<td>" + total[3] + "</td>\
-																</tr>";
+								<td>" + total[0] + "</td>\
+								<td>" + total[1] + "</td>\
+								<td>" + total[2] + "</td>\
+								<td>" + total[3] + "</td>\
+								</tr>";
 
 
                 detailsHtml += "              </tbody>\
