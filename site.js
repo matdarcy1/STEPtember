@@ -85,7 +85,7 @@ $( document ).ready(function() {
                                                                         </tr>";
                                                     }
                                                 });
-                                                detailsHtml += "<tr><td>Total</td>\
+                                                detailsHtml += "<tr style='font-weight:bold'><td>Total</td>\
 								<td>" + total[0] + "</td>\
 								<td>" + total[1] + "</td>\
 								<td>" + total[2] + "</td>\
